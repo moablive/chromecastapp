@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  chromecast:
+    build: .
+    container_name: chromecast
+    # NETWORK MODE HOST É OBRIGATÓRIO PARA O CHROMECAST SER ENCONTRADO
+    network_mode: host
+    environment:
+      - PASSWORD=AstralCast2025!
+    restart: unless-stopped
